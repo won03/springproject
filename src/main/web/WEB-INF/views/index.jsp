@@ -17,7 +17,7 @@
         $(document).ready(function () {
             $("#header").load("${pageContext.request.contextPath}/resources/common/header.html");
             $("#category").load("${pageContext.request.contextPath}/resources/common/category.html");
-            $("#head").load("${pageContext.request.contextPath}/resources/lib/library.html");
+            $("#head").load("${pageContext.request.contextPath}/resources/common/header.html");
         });
     </script>
     <style>
