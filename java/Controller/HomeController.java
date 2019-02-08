@@ -1,10 +1,11 @@
 package Controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.swing.text.View;
-import javax.xml.bind.annotation.XmlElementRef;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
@@ -67,6 +68,33 @@ public class HomeController {
     @RequestMapping("/login")
     public String customerLogin() {
         return VIEW_PATH + "/customer/member/login.jsp";
+    }
+
+    // customer login
+    @RequestMapping("/loginCheck")
+    public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) {
+        boolean result = memberService.loginCheck(vo, session);
+        ModelAndView modelAndView = new ModelAndView();
+        if (result == true) {   // login success
+            // go to index
+            modelAndView.setViewName("/");
+            modelAndView.addObject("msg", "success");
+        } else {    // login failed
+            // go to login
+            modelAndView.setViewName("/login");
+            modelAndView.addObject("msg", "failed");
+        }
+        return modelAndView;
+    }
+
+    // customer logout
+    @RequestMapping("/logout")
+    public ModelAndView logout(HttpSession session) {
+        memberService.logout(session);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/login");
+        modelAndView.addObject("msg", "logout");
+        return modelAndView;
     }
 
     @RequestMapping("/sign-up")
@@ -140,4 +168,6 @@ public class HomeController {
     public String adminMain() {
         return VIEW_PATH + "admin/index.jsp";
     }
+
+    /* for administrator end */
 }
