@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShopController {
     public static final String VIEW_PATH="/WEB-INF/views/";
 
-    @RequestMapping("/index.kmarket")
+    @RequestMapping("/index.do")
     public String index(){
         return VIEW_PATH+"index.jsp";
     }
-    @RequestMapping("/login.kmarket")
+    @RequestMapping("/login.do")
     public String login(){
         return VIEW_PATH+"login.jsp";
     }
-    @RequestMapping("/sign-up.kmarket")
+    @RequestMapping("/sign-up.do")
     public String sign_up(){
         return VIEW_PATH+"sign-up.jsp";
     }
