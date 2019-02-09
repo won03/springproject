@@ -1,9 +1,11 @@
 package Controller;
 
+import dto.CustomerVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import service.CustomerService;
 
 import javax.servlet.http.HttpSession;
 
@@ -72,8 +74,8 @@ public class HomeController {
 
     // customer login
     @RequestMapping("/loginCheck")
-    public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) {
-        boolean result = memberService.loginCheck(vo, session);
+    public ModelAndView loginCheck(@ModelAttribute CustomerVO vo, HttpSession session) {
+        boolean result = CustomerService.loginCheck(vo, session);
         ModelAndView modelAndView = new ModelAndView();
         if (result == true) {   // login success
             // go to index
