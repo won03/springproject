@@ -40,7 +40,7 @@
     </h3>
     </p>
 
-    <form action="loginCheck.do" id="loginAction" method="post">
+    <form action="loginCheck.jsp" id="loginAction" method="post">
         <div class="col-md-6 right-side">
 				<span class="input input--hoshi">
 					<input class="input__field input__field--hoshi" type="text" id="ID" name="ID"/>

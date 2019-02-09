@@ -72,7 +72,7 @@ public class HomeController {
         return VIEW_PATH + "/customer/member/login.jsp";
     }
 
-    // customer login
+/*    // customer login
     @RequestMapping("/loginCheck")
     public ModelAndView loginCheck(@ModelAttribute CustomerVO vo, HttpSession session) {
         boolean result = CustomerService.loginCheck(vo, session);
@@ -92,12 +92,12 @@ public class HomeController {
     // customer logout
     @RequestMapping("/logout")
     public ModelAndView logout(HttpSession session) {
-        memberService.logout(session);
+        CustomerService.logout(session);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/login");
         modelAndView.addObject("msg", "logout");
         return modelAndView;
-    }
+    }*/
 
     @RequestMapping("/sign-up")
     public String customerSignUp() {
