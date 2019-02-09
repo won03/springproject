@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class CustomerVO {
     private int idx;
+    private String name;
     private String pw;
     private String email;
     private String addr;
@@ -56,6 +57,14 @@ public class CustomerVO {
 
     public void setUserUpdatedate(Date userUpdatedate) {
         this.userUpdatedate = userUpdatedate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

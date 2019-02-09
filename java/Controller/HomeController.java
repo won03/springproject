@@ -71,7 +71,7 @@ public class HomeController {
     }
 
     // customer login
-    @RequestMapping("/loginCheck")
+    /*@RequestMapping("/loginCheck")
     public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) {
         boolean result = memberService.loginCheck(vo, session);
         ModelAndView modelAndView = new ModelAndView();
@@ -85,17 +85,17 @@ public class HomeController {
             modelAndView.addObject("msg", "failed");
         }
         return modelAndView;
-    }
+    }*/
 
     // customer logout
-    @RequestMapping("/logout")
+    /*@RequestMapping("/logout")
     public ModelAndView logout(HttpSession session) {
         memberService.logout(session);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/login");
         modelAndView.addObject("msg", "logout");
         return modelAndView;
-    }
+    }*/
 
     @RequestMapping("/sign-up")
     public String customerSignUp() {
