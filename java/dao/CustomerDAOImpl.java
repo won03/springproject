@@ -16,7 +16,7 @@ public class CustomerDAOImpl implements CustomerDAO {
     public List<CustomerVO> selectList() {
         List<CustomerVO> list = null;
 
-        // mapper의 dept.xml 에서 dept_list 수행
+        // mapper의 Mapper.xml 에서 dept_list 수행
         list = sqlSession.selectList("customer.customer_list");
         System.out.println(list.get(0).getEmail());
 
@@ -24,12 +24,7 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean loginCheck(CustomerVO vo) {
-
-
-
-        return false;
-    }
+    public boolean loginCheck(CustomerVO vo) { return false; }
 
     @Override
     public CustomerVO viewMember(CustomerVO vo) {

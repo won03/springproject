@@ -16,6 +16,6 @@
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="config/mybatis/mapper/dept.xml"/>
+		<mapper resource="config/mybatis/mapper/customer.xml"/>
 	</mappers>
 </configuration>
