@@ -1,12 +1,14 @@
 package service;
 
+import dto.CustomerVO;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
 public class CustomerServiceImpl implements CustomerService {
 
     @Inject
-    MemberDAO memberDAO;
+    CustomerDAO customerDAO;
 
     // member login check
     @Override
