@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dept">
+<mapper namespace="customer">
 
-	<select id="dept_list" resultType="vo.DeptVO">
-		select * from departments
+	<select id="customer_list" resultType="dto.CustomerVO">
+		select * from MEMBER_BUYER
 	</select>
 
 </mapper>

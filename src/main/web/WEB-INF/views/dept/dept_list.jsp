@@ -12,17 +12,13 @@
 		<table border="1">
 			<!-- 첫 행은 제목 -->
 			<tr>
-				<th>부서번호</th>
-				<th>부서명</th>
-				<th>부서위치번호</th>
+				<th>가입 회원 이메일 목록</th>
 			</tr>
 			
 			<!-- 두 번째 행부터는, 리스트의 개수만큼 행을 만든다. -->
 			<c:forEach var="vo" items="${list}">
 				<tr>
-					<th>${vo.department_id}</th>
-					<th>${vo.department_name}</th>
-					<th>${vo.location_id}</th>
+					<th>${vo.email}</th>
 				</tr>
 			</c:forEach>
 			

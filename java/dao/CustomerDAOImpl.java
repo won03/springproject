@@ -24,12 +24,7 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean loginCheck(CustomerVO vo) {
-
-
-
-        return false;
-    }
+    public boolean loginCheck(CustomerVO vo) { return false; }
 
     @Override
     public CustomerVO viewMember(CustomerVO vo) {
