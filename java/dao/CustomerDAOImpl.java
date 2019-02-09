@@ -2,6 +2,7 @@ package dao;
 
 import dto.CustomerVO;
 import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
@@ -34,5 +35,9 @@ public class CustomerDAOImpl implements CustomerDAO {
     @Override
     public void logout(HttpSession session) {
 
+    }
+
+    public void setSqlSession(SqlSessionTemplate sqlSession) {
+        this.sqlSession = sqlSession;
     }
 }
