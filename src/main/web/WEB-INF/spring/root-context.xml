@@ -5,9 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
+        <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:log4jdbc:mysql://dreamaker.biz:3306/wkdgus11649?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+                  value="jdbc:mariadb://dreamaker.biz:3306/wkdgus11649?useUnicode=yes&amp;characterEncoding=UTF-8"/>
         <property name="username" value="wkdgus11649"/>
         <property name="password" value="Hanjobs991208!"/>
     </bean>
@@ -35,8 +35,9 @@
             location="classpath:/mybatis/db.properties"/>
 
     <!-- BasicDataSource ds = new BasicDataSource()-->
-    <bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
-        <!-- ds.driverClassName = db.properties의 driver 값 (setter호출) -->
+<!--
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        &lt;!&ndash; ds.driverClassName = db.properties의 driver 값 (setter호출) &ndash;&gt;
         <property name="driverClassName" value="${driver}"/>
         <property name="url" value="${url}"/>
         <property name="username" value="${user}"/>
@@ -44,6 +45,7 @@
         <property name="defaultAutoCommit" value="false"/>
         <property name="maxActive" value="10"/>
     </bean>
+-->
 
 
     <!-- Root Context: defines shared resources visible to all other web components -->

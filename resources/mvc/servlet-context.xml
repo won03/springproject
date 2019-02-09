@@ -17,17 +17,8 @@
 
 	<beans:bean id="dept_daoBean" class="Controller.HomeController">
 		<!-- 컨트롤러를 생성하고, 생성자로 3번 xml에서 만든 dao 객체를 전달 -->
-		<beans:constructor-arg ref="dept_dao"/>
+		<!--<beans:constructor-arg ref="dept_dao"/>-->
 	</beans:bean>
 	
 	
 </beans:beans>
-
-
-
-
-
-
-
-
-

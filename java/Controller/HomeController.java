@@ -4,11 +4,7 @@ import dao.CustomerDAOImpl;
 import dto.CustomerVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +21,7 @@ public class HomeController {
         this.dept_dao = dept_dao;
     }
 
+/*
     @RequestMapping("/list.korea")
     public String list( Model model ) {
 
@@ -35,6 +32,7 @@ public class HomeController {
 
         return "/WEB-INF/views/dept/dept_list.jsp";
     }
+*/
 
 
     public static final String VIEW_PATH = "/WEB-INF/views/";
