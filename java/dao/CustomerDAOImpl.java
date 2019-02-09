@@ -12,6 +12,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 
     @Override
     public boolean loginCheck(CustomerVO vo) {
+
+
+
         return false;
     }
 
