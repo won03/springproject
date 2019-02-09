@@ -7,7 +7,7 @@
 	
 	<!-- 컨트롤러에서 사용할 수 있는 DAO 객체 생성
 		DeptDAO dept_dao = new DeptDAO(); -->
-	<bean id="dept_dao" class="dao.DeptDAO">
+	<bean id="customer_dao" class="dao.CustomerDAOImpl">
 		<!-- 2번 xml에서 만든 객체 주입
 			 dept_dao.setSqlSession(sqlSessionBean); -->
 		<property name="sqlSession" ref="sqlSessionBean"></property>
