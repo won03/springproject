@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="resources/semantic/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <style>
+        body {
+            padding-right: 20%;
+            padding-left: 20%;
+            font-family: 'Nanum Gothic' !important;
+        }
+
+        #loginAndRegisterBox {
+            padding-top: 0%;
+            margin-top: 0%;
+            background-color: cornsilk;
+            height: 30px;
+            text-align: right;
+        }
+
+        a, a:hover {
+            text-decoration: none;
+            text-decoration-color: unset;
+            font-size: 20px;
+            font-family: 'Nanum Gothic' !important;
+        }
+
+        #logoAndSearchBox {
+            display: inline-flex;
+            margin-top: 3%;
+            width: 70%;
+        }
+
+        input[type="text"] {
+            border: 3px solid blue;
+            margin-left: 30px;
+            font-size: 20px;
+            padding: 20px;
+            width: 70%;
+        }
+
+        #myPage {
+            display: inline;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="loginAndRegisterBox">
+    <p><a href="/springproject_war_exploded/login.kmarket">로그인</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/springproject_war_exploded/sign-up.kmarket">회원가입</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">고객센터</a></p>
+</div>
+<div id="logoAndSearchBox">
+    <img src="http://placehold.it/200x35" alt="로고">
+    <input type="text" placeholder="검색어를 입력하세요.">
+</div>
+<div id="myPage">
+    <div class="ui icon header">
+        <i class="search icon"></i>
+        마이 K
+    </div>
+    <div class="ui icon header" style="margin-left: 30px">
+        <i class="cart arrow down icon"></i>
+        장바구니
+    </div>
+</div>
+</body>
+
+</html>

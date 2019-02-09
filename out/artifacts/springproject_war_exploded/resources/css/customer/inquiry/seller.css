@@ -1,0 +1,74 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+p{
+	margin: 0; 
+    padding: 0; 
+}
+
+
+.page_depth_nav{
+	padding: 2% 0 3% 0;
+}
+
+h2{
+	margin: 3% 0;
+}
+
+#nav {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+}
+
+#content{
+	float:left;
+	width: 100%;
+	display:block;
+}
+
+.product_purchased_div{
+	width: 97%;
+	margin-top: 5%;
+	overflow: auto;
+	background-color: #ddd;
+	margin-bottom: 3%;
+}
+.product_purchased_img{
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin-right: 3%;
+}
+.product_purchased_info{
+	float: left;
+	margin-top: 3%;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.ask_title{
+	font-size: 1.5em;
+}
+.ask_content{
+	line-height: 1.5;
+}
+
+.reply_title{
+	border-top: 2px dashed #ddd;
+	padding-top: 2%;
+	font-size: 1.5em;
+}
+.reply_content{
+	line-height: 1.5;
+}
+.reply_date
+
+
+
+
