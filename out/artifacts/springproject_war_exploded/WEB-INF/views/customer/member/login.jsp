@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="resources/css/customer/login/set1.css">
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Playfair+Display|Lato:400,700"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Playfair+Display|Lato:400,700" rel="stylesheet">
     <style>
         .header_title {
             font-family: 'Indie Flower' !important;
@@ -40,26 +39,24 @@
     </h3>
     </p>
 
-    <form action="loginCheck.do" id="loginAction" method="post">
+    <form action="" id="" method="">
         <div class="col-md-6 right-side">
 				<span class="input input--hoshi">
-					<input class="input__field input__field--hoshi" type="text" id="ID" name="ID"/>
+					<input class="input__field input__field--hoshi" type="text" id="ID" name="ID" />
 					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="ID">
 						<span class="input__label-content input__label-content--hoshi">ID</span>
 					</label>
 				</span>
             <span class="input input--hoshi">
-					<input class="input__field input__field--hoshi" type="password" id="password" name="password"/>
+					<input class="input__field input__field--hoshi" type="password" id="password" name="password" />
 					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password">
 						<span class="input__label-content input__label-content--hoshi">Password</span>
 					</label>
 				</span>
             <div class="cta">
                 <button class="btn btn-primary pull-left" type="submit">로그인</button>
-                <button class="btn btn-primary pull-left"><a href="/springproject_war_exploded/sign-up.kmarket">회원가입</a>
-                </button>
+               <button  class="btn btn-primary pull-left"><a href="/springproject_war_exploded/sign-up.kmarket">회원가입</a></button>
             </div>
-        </div>
     </form>
 
     <ul class="social list-inline">

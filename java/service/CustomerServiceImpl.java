@@ -1,5 +1,6 @@
 package service;
 
+import dao.CustomerDAO;
 import dto.CustomerVO;
 
 import javax.inject.Inject;
@@ -13,12 +14,12 @@ public class CustomerServiceImpl implements CustomerService {
     // member login check
     @Override
     public boolean loginCheck(CustomerVO vo, HttpSession session) {
-        boolean result = memberDAO.loginCheck(vo);
+        boolean result = customerDAO.loginCheck(vo);
         if (result) {   // if true reg on session
             CustomerVO vo2 = viewMember(vo);
             // reg session variable
-            session.setAttribute("userId", vo2.getUserId());
-            session.setAttribute("userName", vo2.getUserName());
+            session.setAttribute("userEmail", vo2.getEmail());
+            session.setAttribute("userIdx", vo2.getIdx());
         }
         return result;
     }
@@ -26,7 +27,7 @@ public class CustomerServiceImpl implements CustomerService {
     // member login information
     @Override
     public CustomerVO viewMember(CustomerVO vo) {
-        return memberDAO.viewMember(vo);
+        return customerDAO.viewMember(vo);
     }
 
     @Override
