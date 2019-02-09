@@ -14,11 +14,50 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:/mybatis-config.xml"/>
-        <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"/>
+        <property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:/mybatis/mapper/Mapper.xml"/>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
         <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+    </bean>
+
+
+    <!-- 컨트롤러에서 사용할 수 있는 DAO 객체 생성
+        DeptDAO dept_dao = new DeptDAO(); -->
+    <bean id="customer_dao" class="dao.CustomerDAOImpl">
+        <property name="sqlSession" ref="sqlSessionBean"></property>
+    </bean>
+
+
+    <!-- Root Context: defines shared resources visible to all other web components -->
+    <context:property-placeholder
+            location="classpath:/mybatis/db.properties"/>
+
+    <!-- BasicDataSource ds = new BasicDataSource()-->
+    <bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- ds.driverClassName = db.properties의 driver 값 (setter호출) -->
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${user}"/>
+        <property name="password" value="${password}"/>
+        <property name="defaultAutoCommit" value="false"/>
+        <property name="maxActive" value="10"/>
+    </bean>
+
+
+    <!-- Root Context: defines shared resources visible to all other web components -->
+    <bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 마이바티스 세션 객체를 만들면서 dataSource를 아까 만든 객체를 주입 -->
+        <property name="dataSource" ref="dataSource"></property>
+
+        <!-- 쿼리를 작성해둔 xml 파일을 매핑 -->
+        <property name="configLocation"
+                  value="classpath:/mybatis/mybatis-config.xml"></property>
+    </bean>
+
+    <bean id="sqlSessionBean" class="org.mybatis.spring.SqlSessionTemplate">
+        <!-- 객체를 만들면서 생성자에 위에서 만든 객체를 주입 -->
+        <constructor-arg ref="factoryBean"/>
     </bean>
 </beans>
