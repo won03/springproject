@@ -1,5 +1,7 @@
 package service;
 
+import dto.CustomerVO;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
